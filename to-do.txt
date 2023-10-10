@@ -1,0 +1,25 @@
+
+
+-------------------------------------------------------------------------------------------------------------
+.                                                                                                           .
+.            ...................................................................................            .
+.            .    -crear en el html un form con un input y un boton, ubicarlo en el header *   .            .
+.            .    -crear un contenedor centrado para almacenar la card, ubicarlo en el main *  .            .
+.            .    -crear un formato de card que contenga la imagen, el nombre,               * .            .
+.            .    los ingredientes, el precio, ubicarlo en el contenedor anteriormente creado* .            .         
+.            .    -crear un pequeño footer*                                                    .            .         
+.            .    -estilar el header*                                                          .            .         
+.            .    -estilar el main y el formato de card*                                       .            .          
+.            .    -estilar el footer*                                                          .            .          
+.            .    -crear y estilar un formato de los errores*                                  .            .          
+.            .    -crear una funcion para leer y validar lo ingresado en el input*             .            .          
+.            .    -crear una funcion para renderizar los errores*                              .            .          
+.            .    -crear una funcion para renderizar la card*                                  .            .          
+.            .    -crear una funcion para guardar en el localStorage                           .            .          
+.            .    -crear una funcion para renderizar lo almacenado en el localStorage          .            .          
+.            .    -subirlo Github                                                              .            .          
+.            .    -subirlo deployarlo en vercel                                                .            .          
+.            .    -ENTREGARLO                                                                  .            .          
+.            ...................................................................................            .
+.                                                                                                           .
+-------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,201 @@
+* {
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #51a2ff;
+}
+header {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: end;
+  gap: 2vw;
+  padding-bottom: 5vw;
+}
+.title {
+  padding-top: 3vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  font-size: 3.5vw;
+  color: white;
+}
+.title img {
+  width: 100px;
+}
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5vw;
+}
+.error {
+  color: rgb(228, 53, 53);
+  font-weight: 600;
+  font-size: 3vw;
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+form input:focus-visible {
+  border: none;
+  outline: none;
+}
+form input:focus ~ button {
+  background-color: black;
+  box-shadow: 0px 0px 1rem 3px rgb(145, 226, 240);
+}
+form input:hover ~ button,
+button:hover {
+  background-color: black;
+  box-shadow: 0px 0px 3rem 3px whitesmoke;
+}
+form input:focus {
+  box-shadow: 0px 0px 1rem 3px rgb(145, 226, 240);
+  border: 1px solid rgb(145, 226, 240);
+}
+form input:hover {
+  box-shadow: 0px 0px 3rem 3px whitesmoke;
+  border: 1px solid whitesmoke;
+}
+form input::placeholder {
+  color: white;
+}
+form button:hover {
+  background-color: black;
+}
+form button {
+  padding: 0.1vw 0.8vw;
+  background-color: transparent;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  transition: all 0.2s;
+  border-bottom: 1px solid white;
+}
+form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.5vw;
+  background: none;
+  transition: all 0.4s;
+  color: white;
+  border-radius: 0 0 0 5px;
+}
+form input::-webkit-inner-spin-button,
+form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  margin-bottom: 1vw;
+}
+.card {
+  width: 45vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  gap: 1.5vw;
+  animation: flotar 2.5s 1.5s infinite ease-in-out;
+  background-color: #51a2ff;
+  box-shadow: 0 10px 35rem rgba(255, 255, 255, 0.932);
+}
+.card img {
+  width: 51%;
+  border-radius: 5px;
+}
+
+.info h3 {
+  font-size: 2.3vw;
+  text-align: right;
+  color: aliceblue;
+}
+.info h2 {
+  text-align: center;
+  font-size: 2.3vw;
+  color: white;
+}
+.info p {
+  text-align: center;
+  font-size: 1.5vw;
+  color: white;
+}
+.info ul li {
+  text-align: start;
+  font-size: 1.5vw;
+  color: white;
+  list-style: none;
+}
+.info {
+  padding: 0 0.7vw;
+  display: flex;
+  height: 20vw;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer h3 {
+  font-size: 1.5vw;
+  color: white;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5vw;
+}
+.cardError {
+  width: 50vw;
+  height: 25vw;
+  border: 3px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0%);
+    box-shadow: 0 10px 35rem rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: translateY(-2%);
+    box-shadow: 0 0px 10rem rgb(255, 255, 255);
+  }
+  100% {
+    transform: translateY(0%);
+    box-shadow: 0 10px 35rem rgba(255, 255, 255, 0.5);
+  }
+}
