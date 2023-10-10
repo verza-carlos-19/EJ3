@@ -70,16 +70,15 @@ const guardarLocalStorage = (pizza) => {
   localStorage.setItem("ultimaPizza", JSON.stringify(pizza));
 };
 const renderPizza = (json) => {
-  try {
-    const { nombre, precio, ingredientes, imagen } = json;
-    const lista = document.createElement("ul");
-    ingredientes.forEach((ingrediente) => {
-      const ingredienteItem = document.createElement("li");
-      ingredienteItem.textContent = ingrediente;
-      lista.appendChild(ingredienteItem);
-    });
-    const listatxt = lista.outerHTML;
-    contenedor.innerHTML = `        
+  const { nombre, precio, ingredientes, imagen } = json;
+  const lista = document.createElement("ul");
+  ingredientes.forEach((ingrediente) => {
+    const ingredienteItem = document.createElement("li");
+    ingredienteItem.textContent = ingrediente;
+    lista.appendChild(ingredienteItem);
+  });
+  const listatxt = lista.outerHTML;
+  contenedor.innerHTML = `        
   <article class="card">
   <div class="info">
   <h2>${nombre}</h2>
@@ -89,9 +88,6 @@ const renderPizza = (json) => {
   </div>
   <img src="${imagen}" alt="" />
   </article>`;
-  } catch (error) {
-    console.log("el json esta dañado o no existe!");
-  }
 };
 const findPizza = (num, a) => {
   let pizza = a.find((piza) => piza.id == num);
@@ -106,11 +102,7 @@ const addPizza = (e) => {
 
 function init() {
   form.addEventListener("submit", addPizza);
-  try {
-    renderPizza(JSON.parse(localStorage.getItem("ultimaPizza")));
-  } catch (error) {
-    console.log("no hay ninguna pizza en el localstorage");
-  }
+  renderPizza(JSON.parse(localStorage.getItem("ultimaPizza")));
 }
 
 init();
